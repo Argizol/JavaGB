@@ -11,7 +11,7 @@ public class HW3 {
 		}
 		return list;
 	}
-	public static int CalculateMedanFromList(ArrayList<Integer> list){
+	public static int CalculateMedianFromList(ArrayList<Integer> list){
 		int result = 0;
 		for (int num: list) result += num;
 
