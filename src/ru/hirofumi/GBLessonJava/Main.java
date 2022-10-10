@@ -8,7 +8,7 @@ public class Main {
 
     public static void main(String[] args) {
 //  HW3
-//        System.out.println(HW3.DeleteEvenNumbersFromList(new ArrayList<>(Arrays.asList(1, 2, 4, 4, 5, 8, 8, 8))));
+        System.out.println(HW3.DeleteEvenNumbersFromList(new ArrayList<>(Arrays.asList(4, 4, 4))));
 //        System.out.println(Collections.max(new ArrayList<>(Arrays.asList(1, 2, 4, 4, 5, 8, 8, 8))));
 //        System.out.println(Collections.min(new ArrayList<>(Arrays.asList(1, 2, 4, 4, 5, 8, 8, 8))));
 //        System.out.println((HW3.CalculateMedianFromList(new ArrayList<>(Arrays.asList(1, 2, 4, 4, 5, 8, 8, 8)))));
