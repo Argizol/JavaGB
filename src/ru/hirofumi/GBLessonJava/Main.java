@@ -1,30 +1,32 @@
 package ru.hirofumi.GBLessonJava;
+
 import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.LinkedList;
+import java.util.HashMap;
 
 public class Main {
 
     public static void main(String[] args) {
-//  HW3
-        System.out.println(HW3.DeleteEvenNumbersFromList(new ArrayList<>(Arrays.asList(4, 4, 4))));
-//        System.out.println(Collections.max(new ArrayList<>(Arrays.asList(1, 2, 4, 4, 5, 8, 8, 8))));
-//        System.out.println(Collections.min(new ArrayList<>(Arrays.asList(1, 2, 4, 4, 5, 8, 8, 8))));
-//        System.out.println((HW3.CalculateMedianFromList(new ArrayList<>(Arrays.asList(1, 2, 4, 4, 5, 8, 8, 8)))));
-//  HW4
-
-        LinkedList<Integer> linkedList = new LinkedList<>();
-        linkedList.push(1);
-        linkedList.push(2);
-        linkedList.push(3);
-        linkedList.push(4);
-        linkedList.push(5);
-        System.out.println("List: " + linkedList);
-        System.out.println("Reversed list: " + HW4.LinkedListReverse(linkedList));
-        System.out.println("Reversed list: " + HW4.LinkedListReverseIterator(linkedList));
-        System.out.println(HW4.CalculateSumOfLinkedListElements(linkedList));
-        System.out.println();
-
+//        HW5
+//        Task1
+        HashMap<String, ArrayList<String>> phoneBook = new HashMap<>();
+        ArrayList<String> phones = new ArrayList<>();
+        String[] arr = {"Вася 1231", "Вася 1111",
+                        "Игорь 11131", "Игорь 1231",
+                        "Игорь 1231", "Игорь 1231",
+                        "Игорь 1231", "Игорь 1231",
+                        "Игорь 1231", "Игорь 1231",
+                        "Петя 44431", "Петя 1231"};
+        System.out.println(HW5.createAndPrintPhonebook(arr,phoneBook,phones));
+//        Task 2
+        var names = new String[]{"Иван Иванов", "Светлана Петрова", "Кристина Белова",
+                "Анна Мусина", "Анна Крутова", "Иван Юрин", "Петр Лыков",
+                "Павел Чернов", "Петр Чернышов", "Мария Федорова",
+                "Марина Светлова", "Мария Савина", "Мария Рыкова",
+                "Марина Лугова", "Анна Владимирова", "Иван Мечников",
+                "Петр Петин", "Иван Ежов"};
+        System.out.println(HW5.countPersons(names));
     }
+
 }
+
+
