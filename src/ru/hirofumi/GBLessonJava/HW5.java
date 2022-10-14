@@ -17,7 +17,8 @@ public class HW5 {
 				phoneBook.put(temp[0], phones);
 
 			} else if (phoneBook.containsKey(temp[0])) {
-				phones.add(temp[1]);
+				ArrayList<String> list = phoneBook.get(temp[0]);
+				list.add(temp[1]);
 			}
 		}
 		return phoneBook;
@@ -47,14 +48,16 @@ public class HW5 {
 				return Integer.compare(key2, key1);
 			}
 		});
-		ArrayList<String> names = new ArrayList<>();
 
 		for (int i = 0; i < countedName.size(); i++) {
 			if(!result.containsKey(countedName.values().toArray()[i])){
-				names = new ArrayList<>();
+				ArrayList<String> names = new ArrayList<>();
 				names.add((String) countedName.keySet().toArray()[i]);
 				result.put((Integer) countedName.values().toArray()[i], names);
-			}else names.add((String) countedName.keySet().toArray()[i]);
+			}else{
+				ArrayList<String> list = result.get(countedName.values().toArray()[i]);
+				list.add((String) countedName.keySet().toArray()[i]);
+			}
 		}
 		return result;
 	}
