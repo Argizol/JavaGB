@@ -1,5 +1,7 @@
 package ru.hirofumi.GBLessonJava;
 
+import java.util.Scanner;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -15,17 +17,11 @@ public class Main {
                 Notebook.Vendors.Asus, Notebook.Color.green, Notebook.OS.DOS));
         Notebook.list.add(new Notebook("14213", Notebook.CpuVendors.AMD,
                 Notebook.Vendors.Asus, Notebook.Color.blue, Notebook.OS.Linux));
-
-        Notebook.printFiltered("Asus");
-        System.out.println();
-        Notebook.printFiltered("Intel");
-        System.out.println();
-        Notebook.printFiltered("AMD");
-        System.out.println();
-        Notebook.printFiltered("31");
-        System.out.println();
-        Notebook.printFiltered("Linux");
-
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите параметр для поиска (OS, производитель ноутбука," +
+                "процессора, цвет, название модели)");
+        String name = scanner.nextLine();
+        Notebook.printFiltered(name);
     }
 }
 
