@@ -1,29 +1,31 @@
 package ru.hirofumi.GBLessonJava;
-import java.util.*;
 
 public class Main {
 
     public static void main(String[] args) {
-//      HW5
-//      Task1
+        Notebook.list.add(new Notebook("SuperNote", Notebook.CpuVendors.AMD,
+                Notebook.Vendors.Asus, Notebook.Color.black, Notebook.OS.WithoutOS));
+        Notebook.list.add(new Notebook("23", Notebook.CpuVendors.Intel,
+                Notebook.Vendors.Asus, Notebook.Color.black, Notebook.OS.WithoutOS));
+        Notebook.list.add(new Notebook("31", Notebook.CpuVendors.AMD,
+                Notebook.Vendors.MSI, Notebook.Color.red, Notebook.OS.Windows));
+        Notebook.list.add(new Notebook("fdhfh", Notebook.CpuVendors.AMD,
+                Notebook.Vendors.Lenovo, Notebook.Color.black, Notebook.OS.WithoutOS));
+        Notebook.list.add(new Notebook("1133", Notebook.CpuVendors.AMD,
+                Notebook.Vendors.Asus, Notebook.Color.green, Notebook.OS.DOS));
+        Notebook.list.add(new Notebook("14213", Notebook.CpuVendors.AMD,
+                Notebook.Vendors.Asus, Notebook.Color.blue, Notebook.OS.Linux));
 
-        String[] arr = {"Вася 1231", "Вася 1111",
-                        "Игорь 11131", "Игорь 1231",
-                        "Игорь 1231", "Игорь 1231",
-                        "Игорь 1231", "Игорь 1231",
-                        "Игорь 1231", "Игорь 1231",
-                        "Петя 44431", "Петя 1231"};
-        System.out.println(HW5.createAndPrintPhonebook(arr));
-//      Task 2
-        var names = new String[]{"Иван Иванов", "Светлана Петрова", "Кристина Белова",
-                "Анна Мусина", "Анна Крутова", "Иван Юрин", "Петр Лыков",
-                "Павел Чернов", "Петр Чернышов", "Мария Федорова",
-                "Марина Светлова", "Мария Савина", "Мария Рыкова",
-                "Марина Лугова", "Анна Владимирова", "Иван Мечников",
-                "Петр Петин", "Иван Ежов"};
+        Notebook.printFiltered("Asus");
         System.out.println();
-        System.out.println(HW5.countPersons(names));
-        System.out.println(HW5.sortedTreeByValue(HW5.countPersons(names)));
+        Notebook.printFiltered("Intel");
+        System.out.println();
+        Notebook.printFiltered("AMD");
+        System.out.println();
+        Notebook.printFiltered("31");
+        System.out.println();
+        Notebook.printFiltered("Linux");
+
     }
 }
 
